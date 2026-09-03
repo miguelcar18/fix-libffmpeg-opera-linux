@@ -2,6 +2,10 @@
 
 set -e
 
+echo "================================================================"
+echo " ACTUALIZADOR ONLINE DE LIBFFMPEG (CHROMIUM) PARA OPERA "
+echo "================================================================"
+
 # Verificamos las dependencias necesarias para el correcto funcionamiento del script
 echo "Verificando dependencias curl y unzip..."
 for cmd in curl unzip; do
@@ -16,10 +20,6 @@ if [ "$EUID" -eq 0 ]; then
     echo "ERROR: Por favor ejecuta el script SIN la palabra 'sudo'."
     exit 1
 fi
-
-echo "================================================================"
-echo " ACTUALIZADOR ONLINE DE LIBFFMPEG (CHROMIUM) PARA OPERA "
-echo "================================================================"
 
 # 1. Creamos una carpeta temporal en el sistema
 TEMP_DIR=$(mktemp -d)
